@@ -10,27 +10,27 @@
     </head>
 
     <style>
-        /* Style the header with a grey background and some padding */
-        .header {
+        #container{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .headerTitle {
             overflow: hidden;
+            background-repeat: no-repeat;
             background-image: url("CSS/image/header-image.png");
             padding: 20px 20px;
             color: white;
+            background-size: cover;
             text-align: center;
+            width: 100%;
+        
         }
+        .headerTitle h1{
+            font-size: 48px;
 
-        /* Style the header links */
-        .header a {
-            float: none;
-            color: black;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 25px;
-            border-radius: 4px;
         }
-
 
         /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
         @media screen and (max-width: 900px) {
@@ -45,98 +45,49 @@
             background-color: #e6ffff;
         }
 
-        .home{
-            display: flex;
-            top: 210px;
-            left: 50%;
-            text-align: center;
-            font-size: 25px;
-            color: blue;
-        }
-
-        .home-tekst{
-            display: flex;
-            top: 250px;
-            left: 30%;
-            text-align: center;
-            font-size: 18px;
-            padding: 20px;
+        #home{
+            box-sizing: border-box;
             background-color: #e6e6e6;
-            width: 45%;
+            width: 80%;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        #home h1{
+            text-align: left;
+            font-size: 25px;
+            color: blue;
         }
 
-        a.title:link, a.title:visited {
+        #leftParagraph h1{
+            font-size: 28px;
+        }
+        #leftParagraph, #rightParagraph{
+            white-space: normal;
+            background-color: #e6e6e6;
+            width: 60%;
+            margin-top: 15px;
+        }
 
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
+        #home p{
+            text-align: left;
+            font-size: 18px;
         }
-        a.title:link:active, a.title:visited:active {
-            color: white;
+
+        #introText{
+            margin-left: 280px;
+            box-sizing: border-box;
+            margin: 20 auto;
+       }
+
+        #leftText, #rightText{
+            box-sizing: border-box;
+            display: inline-block;
+            width: calc(50% - 1em);
+            margin: 20px auto;
+            vertical-align: top;
         }
-        a.one:link, a.one:visited {
-            color: blue;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 25px;
-            padding: 5px;
-            position: absolute;
-            top: 0;
-            left: 40%;
-        }
-        a.one:link:active, a.one:visited:active {
-            color: blue;
-        }
-        a.two:link, a.two:visited {
-            color: blue;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 25px;
-            padding: 5px;
-            position: absolute;
-            top: 20%;
-            left: 40%;
-        }
-        a.two:link:active, a.two:visited:active {
-            color: blue;
-        }
-        a.three:link, a.three:visited {
-            color: blue;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 25px;
-            padding: 5px;
-            position: absolute;
-            top: 40%;
-            left: 40%;
-        }
-        a.three:link:active, a.three:visited:active {
-            color: blue;
-        }
-        a.four:link, a.four:visited {
-            color: blue;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 25px;
-            padding: 5px;
-            position: absolute;
-            top: 60%;
-            left: 40%;
-        }
-        a.four:link:active, a.four:visited:active {
-            color: blue;
-        }
-        a.five:link, a.five:visited {
-            color: blue;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 25px;
-            padding: 5px;
-            position: absolute;
-            top: 80%;
-            left: 40%;
-        }
-        a.five:link:active, a.five:visited:active {
+        
+        #leftText h1, #rightText h1{
             color: blue;
         }
 
@@ -149,56 +100,33 @@
             width: 45%;
             height: 2000px;
         }
-        .navigation-tekst-one {
+
+        .navigation-tekst-one, .navigation-tekst-two, .navigation-tekst-three, .navigation-tekst-four, .navigation-tekst-five {
             text-align: center;
             font-size: 18px;
             padding: 20px;
             max-width: 50%;
-            position: absolute;
             top: 0;
             left: 10%;
         }
-        .navigation-tekst-two {
-            text-align: center;
-            font-size: 18px;
-            padding: 20px;
-            max-width: 50%;
-            position: absolute;
-            top: 20%;
-            left: 10%;
-        }
-        .navigation-tekst-three {
-            text-align: center;
-            font-size: 18px;
-            padding: 20px;
-            max-width: 50%;
-            position: absolute;
-            top: 40%;
-            left: 10%;
-        }
-        .navigation-tekst-four {
-            text-align: center;
-            font-size: 18px;
-            padding: 20px;
-            max-width: 50%;
-            position: absolute;
-            top: 60%;
-            left: 10%;
-        }
-        .navigation-tekst-five {
-            text-align: center;
-            font-size: 18px;
-            padding: 20px;
-            max-width: 50%;
-            position: absolute;
-            top: 80%;
-            left: 10%;
+
+        .underline_span{
+            margin-top: 15px;
+            margin-bottom: 32px;
+            width: 25%;
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: #333;
         }
 
         /* Add a black background color to the top navigation */
         .topnav {
+            margin-top: 35px;
+            padding: 15px;
             background-color: #333;
             overflow: hidden;
+            width: 100%;
+            display: flex;
         }
 
         /* Style the links inside the navigation bar */
@@ -253,87 +181,132 @@
         }
     </style>
 
-    <body>
-        <Header class="header">
-            <a class="title" href="index.html">
-                <h1 id="Title">ICT Portfolio - Hugo Jannink</h1>
+<body>
+
+<section class="container" id="container">
+    <aside class="text" id="header">
+        <div class="topnav" id="myTopnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="HTML/VO.html">Verklaring van Originaliteit</a>
+            <a href="HTML/Werkfilosofie.html">Werkfilosofie</a>
+            <a href="HTML/CD.html">Carrière Doelen</a>
+            <a href="HTML/Resume.html">Resume</a>
+            <a href="HTML/Vaardigheden.html">Vaardigheden</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
             </a>
+        </div>
 
-            <div class="topnav" id="myTopnav">
-                <a class="active" href="index.html">Home</a>
-                <a href="HTML/VO.html">Verklaring van Originaliteit</a>
-                <a href="HTML/Werkfilosofie.html">Werkfilosofie</a>
-                <a href="HTML/CD.html">Carrière Doelen</a>
-                <a href="HTML/Resume.html">Resume</a>
-                <a href="HTML/Vaardigheden.html">Vaardigheden</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-            <script>
-                /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-                function myFunction() {
-                    var x = document.getElementById("myTopnav");
-                    if (x.className === "topnav") {
-                        x.className += " responsive";
-                    } else {
-                        x.className = "topnav";
-                    }
-                }
-            </script>
+        <Header class="headerTitle">
+            <h1>ICT Portfolio 
+                <br>
+                - 
+                <br>
+                Hugo Jannink
+            </h1>
         </Header>
+    </aside>
 
-        <div id="home">
-            <h1 class="home">Home</h1>
-            <p class="home-tekst">
-                Welkom,
-                Mijn naam is Hugo Jannink.
-                Ik doe de opleiding HBO-ICT op de hogeschool van Utrecht, de HU.
-                Op deze pagina presenteer ik mijn portfolio.
-                Mijn portfolio is opgedeeld in 5 thema’s, Verklaring van originaliteit, werkfilosofie, carrière doelen, Resume en vaardigheden.
-                Ieder thema is onderverdeeld in sub-thema's deze worden beschreven bij de desbetreffende thema's.
-                Bovenaan de pagina staan verschillende de thema's aangegeven, waarop u kan klikken.
-                Ook kunt u hieronder op de symbolen klikken om naar de desbetreffende thema te gaan.
-                <br><br><br>
-                Het portfolio is een onderdeel van mijn HBO-ICT opleiding.
-                Hiermee leer ik wat ik fout en goed doe, zodat ik hier later op kan verbeteren en dit dan aan potentiële werkgevers kan laten zien, zodat zij dan mij misschien kunnen
-                Bij het maken van het portfolio staan een paar punten centraal, Verklaring van originaliteit, werkfilosofie, carrière doelen, Resume en vaardigheden.
-                Deze punten zijn de belangrijkste punten in een portfolio, want deze punten vertellen de potentiële werkgever met wie hij aan het praten is.
-                <br><br>
-                Hieronder staat een kleine inhoudsopgave met een klein stukje tekst.
+
+
+<section class="text" id="introText">
+    <div id="home">
+        <h1 class="underline_span">Home</h1>
+        <p>
+            Welkom,
+            Mijn naam is Hugo Jannink.
+            Ik doe de opleiding HBO-ICT op de hogeschool van Utrecht, de HU.
+            Op deze pagina presenteer ik mijn portfolio.
+            Mijn portfolio is opgedeeld in 5 thema’s, Verklaring van originaliteit, werkfilosofie, carrière doelen, Resume en vaardigheden.
+            Ieder thema is onderverdeeld in sub-thema's deze worden beschreven bij de desbetreffende thema's.
+            Bovenaan de pagina staan verschillende de thema's aangegeven, waarop u kan klikken.
+            Ook kunt u hieronder op de symbolen klikken om naar de desbetreffende thema te gaan.
+            <br><br>
+            Het portfolio is een onderdeel van mijn HBO-ICT opleiding.
+            Hiermee leer ik wat ik fout en goed doe, zodat ik hier later op kan verbeteren en dit dan aan potentiële werkgevers kan laten zien, zodat zij dan mij misschien kunnen
+            Bij het maken van het portfolio staan een paar punten centraal, Verklaring van originaliteit, werkfilosofie, carrière doelen, Resume en vaardigheden.
+            Deze punten zijn de belangrijkste punten in een portfolio, want deze punten vertellen de potentiële werkgever met wie hij aan het praten is.
+            <br><br>
+            Hieronder staat een kleine inhoudsopgave met een klein stukje tekst.
+            </p>
+    </div>
+
+<div class="text" id="leftText">
+    <div id="leftParagraph" style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px">
+        <a href="HTML/VO.html"><h1 class="underline_span">Verklaring</h1></a>
+        <p>
+            Verklaring van Originaliteit en Vertrouwelijkheid. Deze portefeuille is het werk van Hugo Jannink.
+        </p>
+    </div>
+
+    <div id="leftParagraph" style="width: 350px; height: 350px; padding: 20px">
+        <a href="HTML/Werkfilosofie.html"><h1 class="underline_span">Werkfilosofie</h1></a>
+        <p>
+            Work hard. Play hard
+        </p>
+    </div>
+
+        <div id="leftParagraph" style="width: 350px; height: 350px; padding: 20px">
+            <a href="HTML/CD.html"><h1 class="underline_span">Carrière Doelen</h1></a>
+            <p>
+                test
             </p>
         </div>
 
-        <div id="navigation-block" class="navigation-block">
-            <div id="VO">
-                <a class="one" href="HTML/VO.html">Verklaring van Originaliteit</a>
-                <p class="navigation-tekst-one">Verklaring van Originaliteit en Vertrouwelijkheid. Deze portefeuille is het werk van Hugo Jannink.</p>
-                <img style="width: 350px; height: 350px; position: absolute; right: 5px; top: 10px; padding: 20px" src="CSS/image/VO.png" alt="Verklaring van Originaliteit">
-            </div>
-
-            <div id="Werkfilosofie">
-                <a class="two" href="HTML/Werkfilosofie.html">Werkfilosofie</a>
-                <p class="navigation-tekst-two">Work hard. Play hard</p>
-                <img style="width: 350px; height: 350px; position: absolute; right: 5px; top: 20%; padding: 20px" src="CSS/image/werkfilosofie.jpg" alt="Werkfilosofie">
-            </div>
-
-            <div id="CD">
-                <a class="three" href="HTML/CD.html">Carrière Doelen</a>
-                <p class="navigation-tekst-three">test</p>
-                <img style="width: 350px; height: 350px; position: absolute; right: 5px; top: 40%; padding: 20px" src="CSS/image/CD.jfif" alt="Carrière Doelen">
-            </div>
-
-            <div id="Resume">
-                <a class="four" href="HTML/Resume.html">Resume</a>
-                <p class="navigation-tekst-four">test</p>
-                <img style="width: 350px; height: 350px; position: absolute; right: 5px; top: 60%; padding: 20px" src="CSS/image/VO.png" alt="Resume">
-            </div>
-
-            <div id="Vaardigheden">
-                <a class="five" href="HTML/Vaardigheden.html">Vaardigheden</a>
-                <p class="navigation-tekst-five">test</p>
-                <img style="width: 350px; height: 350px; position: absolute; right: 5px; top: 80%; padding: 20px" src="CSS/image/Vaardigheden.png" alt="Vaardigheden">
-            </div>
+        <div id="leftParagraph" style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px">
+            <a href="HTML/Resume.html"><h1 class="underline_span">Resume</h1></a>
+            <p>
+                test
+            </p>
         </div>
+
+        <div id="leftParagraph" style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px">
+            <a href="HTML/Vaardigheden.html"><h1 class="underline_span">Vaardigheden</h1></a>
+            <p>
+                test
+            </p>
+        </div>
+    </div>
+
+</div>
+    
+<div class="text" id="rightText">
+    <div id="rightParagraph">
+        <img style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px" src="CSS/image/VO.png"></p>
+    </div>
+
+    <div id="rightParagraph">
+        <img style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px" src="CSS/image/Werkfilosofie.jpg"></p>
+    </div>
+
+    <div id="rightParagraph">
+        <img style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px" src="CSS/image/CD.jfif"></p>
+    </div>
+
+    <div id="rightParagraph">
+        <img style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px" src="CSS/image/Resume.png"></p>
+    </div>
+
+    <div id="rightParagraph">
+        <img style="width: 350px; height: 350px; right: 5px; top: 10px; padding: 20px" src="CSS/image/Vaardigheden.png"></p>
+    </div>
+</div>
+
+
+</section>
+    
     </body>
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
 </html>
